@@ -1,5 +1,21 @@
+<style>
+div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+</style>
+<div>
 <h1>Carmodels</h1>
 
 <% @carmodels.each do |carmodel| %>
-  <p><%= carmodel.name %></p>
+  <p><%= link_to carmodel.name, carmodel_path(carmodel.id) %></p>
 <% end %>
+
+<hr>
+
+<%= link_to "[New Carmodel]", new_carmodel_path %>
+
+</div>

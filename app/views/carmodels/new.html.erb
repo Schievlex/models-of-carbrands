@@ -1,0 +1,17 @@
+<h1>New Carmodel</h1>
+
+<%= form_for @carmodel do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :bodystyle %>
+  <%= f.text_field :bodystyle %>
+
+  <%= f.label :horsepower %>
+  <%= f.number_field :horsepower %>
+
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+
+  <%= f.submit "Create" %>
+<% end %>
